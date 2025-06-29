@@ -9,4 +9,6 @@ import com.example.bank.entity.UserEntity;
 public interface UserRepository extends JpaRepository<UserEntity, Long> {
 	Optional<UserEntity> findByEmail(String email);
 
+	boolean existsByAccountNumber(String accountNumber);
+
 }
